@@ -6,6 +6,7 @@ import Widget from '../src/components/Widget'
 import FooterWrapper from '../src/components/Footer'
 import GitHubCorner from '../src/components/GitHubCorner'
 import QuizBackground from '../src/components/QuizBackground'
+import NavBar from '../src/components/NavBar'
 
 
 export const QuizContainer = styled.div`
@@ -26,14 +27,15 @@ export default function Home() {
           <title>Linuquix - Um Quiz sobre comandos do terminal do Linux</title>
           <meta property="og:image" content={db.bg}></meta>
         </Head>
+        <NavBar></NavBar>
         <QuizContainer>
           <Widget>
             <Widget.Header>
-              <h1>Linux Quiz</h1>
+              <h1>{db.title}</h1>
             </Widget.Header>
             
             <Widget.Content>
-              <p>Vamos ver se você manja do terminal</p>
+              <p>{db.description}</p>
             </Widget.Content>
           </Widget>
             
