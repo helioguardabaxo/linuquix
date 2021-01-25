@@ -21,12 +21,11 @@ export const QuizContainer = styled.div`
 
 export default function Home() {
   return (
-    <div>
-      <Head>
-        <title>Linuquix - Um Quiz sobre comandos do terminal do Linux</title>
-        <meta property="og:image" content={db.bg}></meta>
-      </Head>
       <QuizBackground backgroundImage={db.bg}>
+        <Head>
+          <title>Linuquix - Um Quiz sobre comandos do terminal do Linux</title>
+          <meta property="og:image" content={db.bg}></meta>
+        </Head>
         <QuizContainer>
           <Widget>
             <Widget.Header>
@@ -47,8 +46,6 @@ export default function Home() {
           <FooterWrapper/>
         </QuizContainer>
       <GitHubCorner projectUrl="http://github.com/helioguardabaxo" />
-      </QuizBackground>
-    </div>
-  
+      </QuizBackground> 
   )
 }
