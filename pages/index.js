@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import db from '../db.json'
+import Head from 'next/head'
 
 import Widget from '../src/components/Widget'
 import FooterWrapper from '../src/components/Footer'
@@ -20,31 +21,34 @@ export const QuizContainer = styled.div`
 
 export default function Home() {
   return (
-  <QuizBackground backgroundImage={db.bg}>
-    <QuizContainer>
-    <Widget>
-      <Widget.Header>
-        <h1>Linux Quiz</h1>
-      </Widget.Header>
-      
-      <Widget.Content>
-        <p>Vamos ver se você manja do terminal</p>
-      </Widget.Content>
-    </Widget>
-      
-    <Widget>
-      <Widget.Content>
-        <h1>Quizes da galera</h1>
-        <p>Vamos galera!</p>
-      </Widget.Content>
-    </Widget>
-    <FooterWrapper/>
-    </QuizContainer>
-
-    
-    
-    <GitHubCorner projectUrl="http://github.com/helioguardabaxo" />
-  </QuizBackground>
+    <div>
+      <Head>
+        <title>Linuquix - Um Quiz sobre comandos do terminal do Linux</title>
+        <meta property="og:image" content={db.bg}></meta>
+      </Head>
+      <QuizBackground backgroundImage={db.bg}>
+        <QuizContainer>
+          <Widget>
+            <Widget.Header>
+              <h1>Linux Quiz</h1>
+            </Widget.Header>
+            
+            <Widget.Content>
+              <p>Vamos ver se você manja do terminal</p>
+            </Widget.Content>
+          </Widget>
+            
+          <Widget>
+            <Widget.Content>
+              <h1>Quizes da galera</h1>
+              <p>Vamos galera!</p>
+            </Widget.Content>
+          </Widget>
+          <FooterWrapper/>
+        </QuizContainer>
+      <GitHubCorner projectUrl="http://github.com/helioguardabaxo" />
+      </QuizBackground>
+    </div>
   
   )
 }
