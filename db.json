@@ -2,6 +2,7 @@
   "bg": "https://i2.wp.com/css-tricks.com/wp-content/uploads/2017/06/css-is-awesome-scaled.jpg?resize=1536%2C1208&ssl=1",
   "title": "Linuquix",
   "description": "Um Quiz sobre comandos do terminal do Linux",
+  "avatar": "/me.jpeg",
   "questions": [
     {
       "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
