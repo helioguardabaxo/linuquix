@@ -7,20 +7,12 @@ import db from '../db.json';
 import Widget from '../src/components/Widget';
 import FooterWrapper from '../src/components/Footer';
 import GitHubCorner from '../src/components/GitHubCorner';
+import Input from '../src/components/Input';
 import QuizBackground from '../src/components/QuizBackground';
+import QuizContainer from '../src/components/QuizContainer';
 import QuizLogo from '../src/components/QuizLogo';
 import NavBar from '../src/components/NavBar';
-
-export const QuizContainer = styled.div`
-  width: 100%;
-  max-width: 350px;
-  padding-top: 45px;
-  margin: auto 10%;
-  @media screen and (max-width: 500px) {
-    margin: auto;
-    padding: 15px;
-  }
-`;
+import Button from '../src/components/Button';
 
 export default function Home() {
   const router = useRouter();
@@ -42,21 +34,23 @@ export default function Home() {
 
           <Widget.Content>
             <p>{db.description}</p>
-            <form onSubmit={function (infosDoEvento) {
+            <form onSubmit={(infosDoEvento) => {
               infosDoEvento.preventDefault();
               router.push(`/quiz?name=${name}`);
               console.log('Fazendo uma submissão por meio do react');
             }}
             >
-              <input 
-                onChange={function (infosDoEvento) {
+              <Input 
+                name="nomeDoUsuario"
+                onChange={(infosDoEvento) => {
                   setName(infosDoEvento.target.value);
                 }}
-                placeholder="Diga aí seu nome" />
-              <button type="submit" disabled={name.length === 0}>
-                Jogar!
-                {name}
-              </button>
+                placeholder="Diga aí seu nome" 
+                value={name} 
+              />
+              <Button type="submit" disabled={name.length === 0}>
+                {`Jogar! ${name}`}
+              </Button>
             </form>
           </Widget.Content>
         </Widget>
