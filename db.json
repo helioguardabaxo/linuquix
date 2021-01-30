@@ -1,34 +1,133 @@
 {
-  "bg": "https://images.wallpapersden.com/image/download/ubuntu-19-10_a2tsaGuUmZqaraWkpJRpZW5rrWdoZWk.jpg",
+  "bg": "https://images.wallpapersden.com/image/download/ubuntu-19-10_a2tsaGuUmZqaraWkpJRmbmdlrWZlbWU.jpg",
   "title": "Linuquix",
   "description": "Um Quiz sobre comandos do terminal do Linux",
   "avatar": "/me.jpeg",
   "questions": [
     {
-      "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-      "title": "Como fazer um seletor por id via CSS?",
-      "description": "Essa é pra aquecer",
-      "answer": 2,
+      "image": "https://media.giphy.com/media/l0MYEpMgixXtNRgrK/source.gif",
+      "title": "Qual o comando para descompactar um arquivo .zip?",
+      "description": "Pô, cadê o WinZip?",
+      "answer": 3,
       "alternatives": [
-        ".elemento",
-        "*elemento",
-        "#elemento",
-        "%elemento"
+        "gunzip",
+        "gzip",
+        "bzip2",
+        "unzip"
       ]
     },
     {
-      "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-      "title": "Como fazer um background gradiente com css?",
-      "description": "Faz tempo em haha",
-      "answer": 0,
+      "image": "https://media.giphy.com/media/3og0ICG4WxdKSRzE3K/giphy.gif",
+      "title": "Qual o comando para exibir a versão atual do kernel?",
+      "description": "Essa é fácil hein?!",
+      "answer": 2,
       "alternatives": [
-         "background: linear-gradient(#e66465, #9198e5);",
-         "background: gradient(#e66465, #9198e5);"
+         "uname -a",
+         "uname -k",
+         "uname -r",
+         "uname -o"
       ]
-    }
-  ],
+    },
+    {
+      "image": "https://media.giphy.com/media/LPU3Ahx6wGsRCDVgV0/source.gif",
+      "title": "Qual o comando não é utilizado para reiniciar o sistema?",
+      "description": "Não sei porque tem tantas formas de fazer a mesma coisa...",
+      "answer": 1,
+      "alternatives": [
+         "halt --reboot",
+         "init 0",
+         "shutdown -r now",
+         "reboot"
+      ]
+    },
+  {
+    "image": "https://media.giphy.com/media/W3CfcMGaabYY0Gnw5f/source.gif",
+    "title": "Qual o comando no VIM para sair do arquivo sem salvar?",
+    "description": "Quem nunca reiniciou o sistema por não saber como fechar o VIM?",
+    "answer": 0,
+    "alternatives": [
+       ":q!",
+       ":wq",
+       ":x",
+       ":quit"
+    ]
+  },
+  {
+    "image": "https://media.giphy.com/media/l2Je5Mochl7iyWHoQ/source.gif",
+    "title": "Qual o comando para listas do arquivos em um diretório/pasta?",
+    "description": "",
+    "answer": 2,
+    "alternatives": [
+       "dir",
+       "list",
+       "ls",
+       "show"
+    ]
+  },
+  {
+    "image": "https://media.giphy.com/media/iIqmM5tTjmpOB9mpbn/source.gif",
+    "title": "O que faz o comando pwd?",
+    "description": "",
+    "answer": 2,
+    "alternatives": [
+       "Exibe o nome do usuário",
+       "Desliga o sistema",
+       "Exibe o endereço do diretório atual"
+    ]
+  },
+  {
+    "image": "https://media.giphy.com/media/MGdfeiKtEiEPS/source.gif",
+    "title": "Para listar os arquivos de um diretório exibindo as permissões, usamos o comando:",
+    "description": "",
+    "answer": 1,
+    "alternatives": [
+       "lsper",
+       "ls -lh",
+       "list -all"
+    ]
+  },
+  {
+    "image": "https://media.giphy.com/media/13HgwGsXF0aiGY/source.gif",
+    "title": "Para verificar a memória livre do sistema, usamos o comando:",
+    "description": "",
+    "answer": 2,
+    "alternatives": [
+       "memfree",
+       "lsmem",
+       "free",
+       "freemem"
+    ]
+  },
+  {
+    "image": "https://media.giphy.com/media/Vk1uLMncfuMFi/source.gif",
+    "title": "Qual o comando para exibir as configurações de rede do computador?",
+    "description": "",
+    "answer": 3,
+    "alternatives": [
+       "net",
+       "ipconfig",
+       "netconfig",
+       "ifconfig"
+    ]
+  },
+  {
+    "image": "https://media.giphy.com/media/DpNrB4a210Qg0/source.gif",
+    "title": "Qual o comando para exibir no terminal o conteúdo do arquivo teste.txt?",
+    "description": "",
+    "answer": 2,
+    "alternatives": [
+       "open test.txt",
+       "touch test.txt",
+       "cat test.txt",
+       "show test.txt"
+    ]
+  }
+],
   "external": [
-    ""
+    "https://aluraquiz-css.omariosouto.vercel.app/",
+    "https://gamequiz.brunoamaia.vercel.app/",
+    "https://alura-quiz-basquete.vercel.app/",
+    "https://aluraquiz.matheusjos3.vercel.app/"
   ],
   "theme": {
     "colors": {
