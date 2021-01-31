@@ -12,7 +12,7 @@ const Main = styled.div`
 const Card = styled.div`
   background:#ddd;
   text-align: center;
-  background-color: #fdcb6e;
+  background-color: ${({ theme }) => `${theme.colors.primary}40`};
   border-radius: 8px;
   height: 500px;
 `;

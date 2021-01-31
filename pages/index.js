@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import React, { useState } from 'react';
+import Terminal from 'terminal-in-react';
 import { useRouter } from 'next/router';
 import db from '../db.json';
 
@@ -18,6 +19,7 @@ import Button from '../src/components/Button';
 export default function Home() {
   const router = useRouter();
   const [name, setName] = React.useState('');
+  let playerName = '';
 
   return (
     <QuizBackground backgroundImage={db.bg}>
@@ -41,16 +43,31 @@ export default function Home() {
           <Widget.Header>
             <h1>{db.title}</h1>
           </Widget.Header>
-
           <Widget.Content>
-            <p>{db.description}</p>
+            <div style={{
+              display: 'flex', justifyContent: 'center', alignItems: 'center', height: '150px', minHeight: '150px', maxHeight: '200px', paddingTop: '300px',
+            }}
+            >
+              <Terminal
+                color="green"
+                backgroundColor="black"
+                barColor="black"
+                style={{
+                  fontWeight: 'bold', fontSize: '1.2em', height: '200px', minHeight: '150px', maxHeight: '250px', padding: '0px',
+                }}
+                allowTabs="false"
+                hideTopBar="true"
+                msg={db.description}
+              />
+            </div>
+
             <form onSubmit={(infosDoEvento) => {
               infosDoEvento.preventDefault();
               router.push(`/quiz?name=${name}`);
               console.log('Fazendo uma submissão por meio do react');
             }}
             >
-              <Input 
+              <Input
                 name="nomeDoUsuario"
                 onChange={(infosDoEvento) => {
                   setName(infosDoEvento.target.value);
@@ -81,7 +98,7 @@ export default function Home() {
             <ul>
               {db.external.map((linkExterno) => {
                 const [projectName, githubUser] = linkExterno
-                  .replace(/\//g,'')
+                  .replace(/\//g, '')
                   .replace('https:', '')
                   .replace('.vercelapp', '')
                   .split('.');
@@ -97,7 +114,7 @@ export default function Home() {
             </ul>
           </Widget.Content>
         </Widget>
-        <FooterWrapper 
+        <FooterWrapper
           as={motion.footer}
           transition={{ delay: 0.5, duration: 0.5 }}
           variants={{
